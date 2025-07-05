@@ -52,9 +52,9 @@ if mode == "1. 시작 레벨 + 쿠폰 → 도달 레벨":
 
 elif mode == "2. 시작~목표 레벨 → 필요한 쿠폰 수":
     col1, col2 = st.columns(2)
-    with col1:
+    with col3:
         start = st.number_input("시작 레벨", min_value=1, max_value=99, step=1, key="start")
-    with col2:
+    with col4:
         end = st.number_input("목표 레벨", min_value=start+1, max_value=100, step=1, key="end")
     coupons = get_needed_coupons(start, end)
     if coupons is not None:
