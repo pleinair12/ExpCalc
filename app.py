@@ -40,6 +40,7 @@ st.markdown("EXP 쿠폰으로 도달 가능한 레벨 또는 필요한 쿠폰 �
 mode = st.radio("기능 선택", ["1. 시작 레벨 + 쿠폰 → 도달 레벨", "2. 시작~목표 레벨 → 필요한 쿠폰 수"])
 
 if mode == "1. 시작 레벨 + 쿠폰 → 도달 레벨":
+    col1, col2 = st.columns(2)
     with col1:
         start_level = st.number_input("시작 레벨 입력 (1~99)", min_value=1, max_value=99, step=1)
     with col2:
@@ -51,7 +52,7 @@ if mode == "1. 시작 레벨 + 쿠폰 → 도달 레벨":
     st.write(f"📊 총 획득 경험치: `{total_exp}` EXP")
 
 elif mode == "2. 시작~목표 레벨 → 필요한 쿠폰 수":
-    col1, col2 = st.columns(2)
+    col3, col4 = st.columns(2)
     with col3:
         start = st.number_input("시작 레벨", min_value=1, max_value=99, step=1, key="start")
     with col4:
